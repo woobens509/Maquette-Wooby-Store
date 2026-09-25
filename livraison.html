@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Livraison — Wooby Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-bar">
+    <a href="index.html" class="logo"><span class="logo-marque" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8l4 16 4-11 4 11 4-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-texte">Wooby<em>Store</em></span></a>
+    <span style="font-size:0.85rem; color:#6b6b6b;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Paiement sécurisé</span>
+  </div>
+</header>
+
+<div class="page-tunnel">
+
+  <div class="etapes-tunnel">
+    <div class="etape fait"><div class="rond">1</div>Panier</div>
+    <div class="etape active"><div class="rond">2</div>Livraison</div>
+    <div class="etape"><div class="rond">3</div>Paiement</div>
+    <div class="etape"><div class="rond">4</div>Confirmation</div>
+  </div>
+
+  <div class="bloc-invite">
+    <strong>Pas de compte à créer.</strong> Renseigne simplement ton adresse pour finaliser ta commande. Tu pourras créer un compte après le paiement si tu le souhaites.
+  </div>
+
+  <form class="formulaire" onsubmit="return allerVersPaiement(event)">
+    <label for="nom">Nom complet</label>
+    <input type="text" id="nom" placeholder="Ex : Awa Sarr" required>
+
+    <label for="telephone">Téléphone</label>
+    <input type="tel" id="telephone" placeholder="Ex : 77 123 45 67" required>
+
+    <label for="adresse">Adresse de livraison</label>
+    <input type="text" id="adresse" placeholder="Quartier, rue, ville" required>
+
+    <label for="zone">Zone de livraison</label>
+    <select id="zone">
+      <option value="2000" data-label="Centre-ville">Centre-ville — 2 000 FCFA</option>
+      <option value="4000" data-label="Banlieue">Banlieue — 4 000 FCFA</option>
+    </select>
+
+    <button type="submit" class="btn btn-primaire btn-large" style="margin-top:24px;">
+      Continuer vers le paiement
+    </button>
+  </form>
+
+  <p style="font-size:0.78rem; color:#6b6b6b; text-align:center; margin-top:16px;">
+    Tes informations sont chiffrées et utilisées uniquement pour l'expédition de ta commande.
+  </p>
+
+</div>
+
+<script src="js/script.js"></script>
+<script>
+  function allerVersPaiement(e) {
+    e.preventDefault();
+    const zoneSelect = document.getElementById("zone");
+    const option = zoneSelect.options[zoneSelect.selectedIndex];
+    const livraison = {
+      prix: parseInt(option.value, 10),
+      libelle: option.getAttribute("data-label")
+    };
+    try {
+      localStorage.setItem("wooby_livraison", JSON.stringify(livraison));
+    } catch (err) {
+      /* navigation privée : le paiement retombera sur la zone par défaut */
+    }
+    window.location.href = "paiement.html";
+    return false;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Note d'audit — Wooby Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-bar">
+    <a href="index.html" class="logo"><span class="logo-marque" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8l4 16 4-11 4 11 4-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-texte">Wooby<em>Store</em></span></a>
+    <span style="font-size:0.85rem; color:#6b6b6b;">Note pédagogique</span>
+  </div>
+</header>
+
+<div class="page-audit">
+  <h1>Note d'audit — justification des choix</h1>
+  <p style="color:#6b6b6b;">
+    Ce document explique, critère par critère, comment cette maquette répond aux points de validation du tuteur (Livrable 1 et Livrable 2).
+  </p>
+
+  <h2 style="font-size:1.1rem; margin-top:30px;">Livrable 1 — Boutique en ligne fonctionnelle</h2>
+
+  <div class="audit-item">
+    <div class="puce"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+    <div>
+      <h4>Structure du catalogue (règle des 3 clics)</h4>
+      <p>Accueil (clic 1 : Homme/Femme) &rarr; sous-catégorie (clic 2 : ex. Sweats) &rarr; fiche produit (clic 3). Vérifiable depuis <a href="index.html">l'accueil</a>.</p>
+    </div>
+  </div>
+
+  <div class="audit-item">
+    <div class="puce"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+    <div>
+      <h4>Tunnel de commande simulable</h4>
+      <p>Le parcours est réellement cliquable : fiche produit &rarr; <a href="panier.html">panier</a> &rarr; <a href="livraison.html">livraison</a> &rarr; <a href="paiement.html">paiement</a> &rarr; <a href="confirmation.html">confirmation</a>. Le panier est mémorisé (localStorage) pour un rendu crédible.</p>
+    </div>
+  </div>
+
+  <div class="audit-item">
+    <div class="puce"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+    <div>
+      <h4>Expérience mobile (zone du pouce)</h4>
+      <p>Sur la fiche produit, un bouton <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 13V6.2a1.4 1.4 0 0 1 2.8 0V12"/><path d="M11.3 12V4.6a1.4 1.4 0 0 1 2.8 0V12"/><path d="M14.1 12.4V6.6a1.4 1.4 0 0 1 2.8 0v6.6"/><path d="M16.9 13.2v-2.6a1.4 1.4 0 0 1 2.8 0v5.6a6 6 0 0 1-6 6h-1.6a6 6 0 0 1-4.7-2.3l-3-3.8a1.3 1.3 0 0 1 2-1.7l1.9 1.7"/></svg> en haut à droite affiche les 3 zones ergonomiques superposées à l'écran. Le bouton d'achat est dupliqué en version flottante, toujours en bas de l'écran (zone verte).</p>
+    </div>
+  </div>
+
+  <div class="audit-item">
+    <div class="puce"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+    <div>
+      <h4>Commande invitée et friction réduite</h4>
+      <p>La page <a href="livraison.html">livraison</a> ne demande que 3 champs (nom, téléphone, adresse) et affiche explicitement "Commande invitée activée" — aucune création de compte ni mot de passe avant paiement.</p>
+    </div>
+  </div>
+
+  <div class="audit-item">
+    <div class="puce"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+    <div>
+      <h4>Paramétrage local</h4>
+      <p>Prix affichés en FCFA (TTC), zones de livraison différenciées (centre-ville / banlieue), moyens de paiement locaux (Wave, Orange Money) en plus de la carte et du paiement à la livraison.</p>
+    </div>
+  </div>
+
+  <h2 style="font-size:1.1rem; margin-top:34px;">Livrable 2 — Fiche produit optimisée (CRO)</h2>
+
+  <div class="audit-item">
+    <div class="puce"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+    <div>
+      <h4>Qualité visuelle multi-angles</h4>
+      <p>La <a href="produit.html">fiche du Hoodie Oversize</a> propose 4 vignettes (face, dos, gros plan matière, mise en situation), chacune liée à sa couleur.</p>
+    </div>
+  </div>
+
+  <div class="audit-item">
+    <div class="puce"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+    <div>
+      <h4>Argumentaire orienté bénéfices</h4>
+      <p>La description applique la méthode Caractéristique &rarr; Avantage &rarr; Bénéfice (ex. "coton peigné bio &rarr; sensation de cocon &rarr; tu ne voudras plus l'enlever") plutôt que de lister des specs brutes.</p>
+    </div>
+  </div>
+
+  <div class="audit-item">
+    <div class="puce"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+    <div>
+      <h4>CTA visible immédiatement, très contrasté</h4>
+      <p>Le bouton "Ajouter au panier" est noir sur fond clair, positionné dans la zone visible sans défiler (above the fold) et dupliqué en bouton flottant sur mobile.</p>
+    </div>
+  </div>
+
+  <div class="audit-item">
+    <div class="puce"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+    <div>
+      <h4>Réassurance proche du bouton</h4>
+      <p>Juste sous le CTA : paiement sécurisé, livraison 24-48h, retour gratuit 14 jours — plus une note de stock bas exploitant le FOMO de façon honnête (stock réellement affiché).</p>
+    </div>
+  </div>
+
+  <h2 style="font-size:1.1rem; margin-top:34px;">Compétences transversales</h2>
+
+  <div class="audit-item">
+    <div class="puce"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+    <div>
+      <h4>Rigueur et organisation</h4>
+      <p>Chaque produit dispose d'informations complètes (prix, variantes, stock, description) tout en gardant un tunnel d'achat minimaliste — l'information n'est jamais sacrifiée à la simplicité, elle est simplement bien répartie entre zone haute et zone basse.</p>
+    </div>
+  </div>
+
+  <div class="audit-item">
+    <div class="puce"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+    <div>
+      <h4>Autonomie face à l'outil</h4>
+      <p>Maquette codée directement en HTML/CSS/JavaScript, sans framework ni service payant, démontrant une compréhension des mécanismes du site plutôt qu'une simple utilisation d'un outil clé en main.</p>
+    </div>
+  </div>
+
+  <p style="margin-top:30px;"><a href="index.html">&larr; Retour à la boutique</a></p>
+</div>
+
+<footer class="site-footer" style="padding:24px 16px;">
+  <p style="text-align:center; color:#b9b2a6; margin:0;">© 2026 Wooby Store — Document interne d'audit qualité.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homme — Wooby Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-bar">
+    <button class="menu-burger" onclick="toggleMenuMobile()" aria-label="Ouvrir le menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <a href="index.html" class="logo"><span class="logo-marque" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8l4 16 4-11 4 11 4-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-texte">Wooby<em>Store</em></span></a>
+    <nav class="nav-principale">
+      <a href="categorie-homme.html"><strong>Homme</strong></a>
+      <a href="categorie-femme.html">Femme</a>
+      <a href="liste-produits.html?cat=nouveautes">Nouveautés</a>
+      <a href="index.html#a-propos">Nos valeurs</a>
+    </nav>
+    <div class="header-icones">
+      <button class="icone-btn" aria-label="Rechercher"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <a href="panier.html" class="icone-btn" aria-label="Panier"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1.1 12.1a2 2 0 0 1-2 1.9H9.1a2 2 0 0 1-2-1.9L6 7z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><span class="badge-panier">0</span></a>
+    </div>
+  </div>
+  <div class="menu-mobile" id="menu-mobile">
+    <a href="categorie-homme.html">Homme</a>
+    <a href="categorie-femme.html">Femme</a>
+    <a href="liste-produits.html?cat=nouveautes">Nouveautés</a>
+    <a href="index.html#a-propos">Nos valeurs</a>
+  </div>
+</header>
+
+<nav class="fil-ariane">
+  <a href="index.html">Accueil</a> &rsaquo; <strong>Homme</strong>
+</nav>
+
+<h1 class="section-titre" style="margin-top:6px;">Univers Homme</h1>
+<p style="padding:0 16px; color:#6b6b6b; margin-top:-8px;">Sweats, chemises et sneakers pensés pour la ville.</p>
+
+<div class="sous-categories">
+  <a href="liste-produits.html?cat=sweats" class="sous-cat-carte">
+    <img src="images/hoodie-face.jpg" alt="Sweats homme">
+    <span>Sweats</span>
+  </a>
+  <a href="liste-produits.html?cat=chemises" class="sous-cat-carte">
+    <img src="images/chemise-homme.jpg" alt="Chemises homme">
+    <span>Chemises</span>
+  </a>
+  <a href="liste-produits.html?cat=chaussures-sport" class="sous-cat-carte">
+    <img src="images/sneakers.jpg" alt="Chaussures de sport homme">
+    <span>Chaussures de sport</span>
+  </a>
+  <a href="liste-produits.html?cat=nouveautes" class="sous-cat-carte">
+    <img src="images/hero-homme.jpg" alt="Nouveautés homme">
+    <span>Nouveautés</span>
+  </a>
+</div>
+
+<footer class="site-footer" id="a-propos">
+  <div class="footer-haut">
+    <div class="footer-marque">
+      <span class="logo"><span class="logo-marque" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8l4 16 4-11 4 11 4-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-texte">Wooby<em>Store</em></span></span>
+      <p>Mode homme et femme pensée pour la ville. Des pièces choisies avec soin, livrées où que tu sois.</p>
+    </div>
+
+    <div class="footer-colonne">
+      <h4>Boutique</h4>
+      <ul>
+        <li><a href="liste-produits.html?cat=nouveautes">Nouveautés</a></li>
+        <li><a href="categorie-homme.html">Collection Homme</a></li>
+        <li><a href="categorie-femme.html">Collection Femme</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-colonne">
+      <h4>Aide</h4>
+      <ul>
+        <li><a href="#">Livraison et retours</a></li>
+        <li><a href="#">Guide des tailles</a></li>
+        <li><a href="#">Suivre ma commande</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-colonne footer-newsletter">
+      <h4>Restons en contact</h4>
+      <p style="margin:0 0 10px; color:#b9b2a6;">Les nouveautés et offres, une fois par mois.</p>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="Ton adresse email" aria-label="Adresse email">
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-paiements">
+    <span>Wave</span>
+    <span>Orange Money</span>
+    <span>Visa / Mastercard</span>
+    <span>Paiement à la livraison</span>
+  </div>
+
+  <div class="footer-bas">
+    <span>© 2026 Wooby Store. Tous droits réservés.</span>
+    <nav>
+      <a href="#">Mentions légales</a>
+      <a href="#">Conditions générales de vente</a>
+      <a href="#">Confidentialité</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

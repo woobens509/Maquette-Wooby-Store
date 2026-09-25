@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Votre panier — Wooby Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-bar">
+    <a href="index.html" class="logo"><span class="logo-marque" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8l4 16 4-11 4 11 4-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-texte">Wooby<em>Store</em></span></a>
+    <div class="header-icones">
+      <a href="panier.html" class="icone-btn" aria-label="Panier"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1.1 12.1a2 2 0 0 1-2 1.9H9.1a2 2 0 0 1-2-1.9L6 7z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><span class="badge-panier">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="page-panier">
+  <div class="container-panier">
+    <div>
+      <h1>Votre panier</h1>
+      <div id="liste-articles"></div>
+
+      <div class="suggestions-panier" id="suggestions-panier" style="display:none;">
+        <h3>Complète ta tenue</h3>
+        <div id="liste-suggestions"></div>
+      </div>
+
+      <div class="encart-upgrade" id="encart-upgrade" style="display:none;">
+        <span class="label">Offre exclusive</span>
+        <p style="margin:6px 0 12px;">Passe au pack complet et économise sur l'ensemble de ta tenue.</p>
+        <button class="btn btn-secondaire">Voir le pack — seulement 8 000 FCFA de plus</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="recap-commande">
+        <h3 style="margin-top:0;">Résumé de la commande</h3>
+        <div class="recap-ligne"><span>Sous-total</span><span id="sous-total">0 FCFA</span></div>
+        <div class="recap-ligne"><span>Livraison</span><span id="frais-livraison">Calculée à l'étape suivante</span></div>
+        <div class="recap-ligne total"><span>Total</span><span id="total-general">0 FCFA</span></div>
+        <a href="livraison.html" class="btn btn-primaire btn-large" style="margin-top:16px;">Passer à la caisse</a>
+        <p style="font-size:0.78rem; color:#6b6b6b; text-align:center; margin-top:10px;">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Paiement sécurisé — aucune création de compte requise
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+  function formaterFCFA(montant) {
+    return montant.toLocaleString("fr-FR") + " FCFA";
+  }
+
+  function afficherPanier() {
+    const panier = lirePanier();
+    const conteneur = document.getElementById("liste-articles");
+    conteneur.innerHTML = "";
+
+    if (panier.length === 0) {
+      conteneur.innerHTML = `
+        <p style="padding:30px 0; text-align:center; color:#6b6b6b;">
+          Ton panier est vide pour le moment.<br>
+          <a href="index.html" class="btn btn-primaire" style="margin-top:14px; display:inline-flex;">Découvrir la collection</a>
+        </p>`;
+      document.getElementById("suggestions-panier").style.display = "none";
+      document.getElementById("encart-upgrade").style.display = "none";
+    } else {
+      panier.forEach((p, index) => {
+        const div = document.createElement("div");
+        div.className = "article-panier";
+        div.innerHTML = `
+          <img src="${p.image}" alt="${p.nom}">
+          <div class="article-panier-info">
+            <h4>${p.nom}</h4>
+            <div class="meta">Couleur : ${p.couleur} — Taille : ${p.taille}</div>
+            <div class="quantite-controle">
+              <button onclick="changerQuantiteLigne(${index}, -1)">-</button>
+              <span id="qte-ligne-${index}">${p.quantite}</span>
+              <button onclick="changerQuantiteLigne(${index}, 1)">+</button>
+            </div>
+          </div>
+          <div style="text-align:right;">
+            <strong>${formaterFCFA(p.prix * p.quantite)}</strong><br>
+            <a href="#" onclick="retirerDuPanier(${index}); return false;" style="font-size:0.8rem; color:#c0392b;">Retirer</a>
+          </div>
+        `;
+        conteneur.appendChild(div);
+      });
+      document.getElementById("suggestions-panier").style.display = "block";
+      document.getElementById("encart-upgrade").style.display = "block";
+    }
+
+    const sousTotal = panier.reduce((acc, p) => acc + p.prix * p.quantite, 0);
+    document.getElementById("sous-total").textContent = formaterFCFA(sousTotal);
+    document.getElementById("total-general").textContent = formaterFCFA(sousTotal);
+
+    // Suggestions de vente croisée, pertinentes par rapport au contenu du panier
+    const suggestions = [
+      { id: "chaussettes", nom: "Chaussettes de sport (lot de 3)", prix: 5000, image: "images/sneakers.jpg" },
+      { id: "echarpe", nom: "Écharpe assortie", prix: 8500, image: "images/manteau-femme.jpg" }
+    ];
+    const listeSuggestions = document.getElementById("liste-suggestions");
+    listeSuggestions.innerHTML = "";
+    suggestions.forEach((s) => {
+      const div = document.createElement("div");
+      div.className = "suggestion-item";
+      div.innerHTML = `
+        <img src="${s.image}" alt="${s.nom}">
+        <div class="infos">${s.nom}<br><strong>${formaterFCFA(s.prix)}</strong></div>
+        <button onclick="ajouterAuPanier({id:'${s.id}', nom:'${s.nom}', prix:${s.prix}, image:'${s.image}', couleur:'Standard', taille:'Unique', quantite:1}); afficherPanier();">+</button>
+      `;
+      listeSuggestions.appendChild(div);
+    });
+  }
+
+  function changerQuantiteLigne(index, delta) {
+    const panier = lirePanier();
+    if (!panier[index]) return;
+    panier[index].quantite = Math.max(1, panier[index].quantite + delta);
+    ecrirePanier(panier);
+    afficherPanier();
+    mettreAJourBadgePanier();
+  }
+
+  // Le script est placé en fin de page : le DOM est déjà prêt, on affiche immédiatement
+  // (plus fiable qu'une attente de DOMContentLoaded, qui peut avoir déjà été déclenché).
+  afficherPanier();
+</script>
+</body>
+</html>

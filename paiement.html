@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paiement — Wooby Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-bar">
+    <a href="index.html" class="logo"><span class="logo-marque" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8l4 16 4-11 4 11 4-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-texte">Wooby<em>Store</em></span></a>
+    <span style="font-size:0.85rem; color:#6b6b6b;"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg> Paiement sécurisé</span>
+  </div>
+</header>
+
+<div class="page-tunnel">
+
+  <div class="etapes-tunnel">
+    <div class="etape fait"><div class="rond">1</div>Panier</div>
+    <div class="etape fait"><div class="rond">2</div>Livraison</div>
+    <div class="etape active"><div class="rond">3</div>Paiement</div>
+    <div class="etape"><div class="rond">4</div>Confirmation</div>
+  </div>
+
+  <h2 style="font-size:1.1rem;">Choisis ton moyen de paiement</h2>
+
+  <div class="moyens-paiement">
+    <label class="moyen-paiement actif">
+      <input type="radio" name="paiement" value="wave" checked style="width:18px;height:18px;">
+      <span class="picto"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2"/><line x1="10.5" y1="18" x2="13.5" y2="18"/></svg></span>
+      <div>
+        <div class="titre">Wave</div>
+        <div class="sous">Paiement instantané depuis ton solde Wave</div>
+      </div>
+    </label>
+
+    <label class="moyen-paiement">
+      <input type="radio" name="paiement" value="orange-money" style="width:18px;height:18px;">
+      <span class="picto"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2"/><line x1="10.5" y1="18" x2="13.5" y2="18"/></svg></span>
+      <div>
+        <div class="titre">Orange Money</div>
+        <div class="sous">Confirmation par code USSD</div>
+      </div>
+    </label>
+
+    <label class="moyen-paiement">
+      <input type="radio" name="paiement" value="carte" style="width:18px;height:18px;">
+      <span class="picto"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5.5" width="20" height="13" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="5.5" y1="14.5" x2="9.5" y2="14.5"/></svg></span>
+      <div>
+        <div class="titre">Carte bancaire</div>
+        <div class="sous">Visa, Mastercard — via passerelle sécurisée</div>
+      </div>
+    </label>
+
+    <label class="moyen-paiement">
+      <input type="radio" name="paiement" value="livraison" style="width:18px;height:18px;">
+      <span class="picto"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><line x1="5.5" y1="9.5" x2="5.5" y2="9.51"/><line x1="18.5" y1="14.5" x2="18.5" y2="14.51"/></svg></span>
+      <div>
+        <div class="titre">Paiement à la livraison</div>
+        <div class="sous">Règle en espèces à réception du colis</div>
+      </div>
+    </label>
+  </div>
+
+  <div class="recap-commande" style="margin-bottom:20px;">
+    <div class="recap-ligne"><span>Sous-total</span><span id="sous-total">—</span></div>
+    <div class="recap-ligne"><span>Livraison (<span id="zone-libelle">Centre-ville</span>)</span><span id="frais-livraison">—</span></div>
+    <div class="recap-ligne total"><span>Total TTC</span><span id="total-general">—</span></div>
+  </div>
+
+  <button class="btn btn-primaire btn-large" onclick="window.location.href='confirmation.html'">
+    Valider et payer
+  </button>
+
+  <div class="reassurance" style="margin-top:20px;">
+    <div class="item"><span class="picto"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>Paiement chiffré</div>
+    <div class="item"><span class="picto"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="8 12.5 10.8 15 16 9"/></svg></span>Aucune donnée stockée</div>
+    <div class="item"><span class="picto"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 11a8 8 0 1 1 2.4 6.2"/><polyline points="3.5 5.5 3.5 11 9 11"/></svg></span>Remboursement facile</div>
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+<script>
+  function formaterFCFA(montant) { return montant.toLocaleString("fr-FR") + " FCFA"; }
+
+  // Récupère la zone de livraison choisie à l'étape précédente (avec repli si absente)
+  let livraison = { prix: 2000, libelle: "Centre-ville" };
+  try {
+    const stockee = JSON.parse(localStorage.getItem("wooby_livraison"));
+    if (stockee && typeof stockee.prix === "number") livraison = stockee;
+  } catch (err) {
+    /* on garde la valeur par défaut */
+  }
+
+  const panier = lirePanier();
+  const sousTotal = panier.reduce((acc, p) => acc + p.prix * p.quantite, 0);
+  document.getElementById("sous-total").textContent = formaterFCFA(sousTotal);
+  document.getElementById("zone-libelle").textContent = livraison.libelle;
+  document.getElementById("frais-livraison").textContent = formaterFCFA(livraison.prix);
+  document.getElementById("total-general").textContent = formaterFCFA(sousTotal + livraison.prix);
+
+  document.querySelectorAll(".moyen-paiement").forEach((label) => {
+    label.addEventListener("click", () => {
+      document.querySelectorAll(".moyen-paiement").forEach((l) => l.classList.remove("actif"));
+      label.classList.add("actif");
+    });
+  });
+</script>
+</body>
+</html>

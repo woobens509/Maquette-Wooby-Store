@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos produits — Wooby Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-bar">
+    <button class="menu-burger" onclick="toggleMenuMobile()" aria-label="Ouvrir le menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <a href="index.html" class="logo"><span class="logo-marque" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8l4 16 4-11 4 11 4-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-texte">Wooby<em>Store</em></span></a>
+    <nav class="nav-principale">
+      <a href="categorie-homme.html">Homme</a>
+      <a href="categorie-femme.html">Femme</a>
+      <a href="liste-produits.html?cat=nouveautes">Nouveautés</a>
+      <a href="index.html#a-propos">Nos valeurs</a>
+    </nav>
+    <div class="header-icones">
+      <button class="icone-btn" aria-label="Rechercher"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <a href="panier.html" class="icone-btn" aria-label="Panier"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1.1 12.1a2 2 0 0 1-2 1.9H9.1a2 2 0 0 1-2-1.9L6 7z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><span class="badge-panier">0</span></a>
+    </div>
+  </div>
+  <div class="menu-mobile" id="menu-mobile">
+    <a href="categorie-homme.html">Homme</a>
+    <a href="categorie-femme.html">Femme</a>
+    <a href="liste-produits.html?cat=nouveautes">Nouveautés</a>
+    <a href="index.html#a-propos">Nos valeurs</a>
+  </div>
+</header>
+
+<nav class="fil-ariane" id="fil-ariane">
+  <a href="index.html">Accueil</a> &rsaquo; <a href="#" id="lien-genre">Homme</a> &rsaquo; <strong id="nom-categorie">Sweats</strong>
+</nav>
+
+<h1 class="section-titre" style="margin-top:6px;" id="titre-categorie">Sweats homme</h1>
+
+<div class="grille-produits" id="grille">
+  <!-- Toutes les cartes sont affichées ; le script met en avant celle(s) de la catégorie choisie -->
+
+  <a href="produit.html" class="carte-produit" data-cat="sweats nouveautes">
+    <div class="image-wrap">
+      <span class="badge-stock">Plus que 3 en stock</span>
+      <img src="images/hoodie-face.jpg" alt="Hoodie Oversize Nouvelle Vague">
+    </div>
+    <div class="carte-produit-info">
+      <h4>Hoodie Oversize</h4>
+      <span class="etoiles"><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star icon-star-vide" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg> (128)</span>
+      <span class="prix">39 900 FCFA</span>
+    </div>
+  </a>
+
+  <a href="produit-2.html" class="carte-produit" data-cat="chemises">
+    <div class="image-wrap">
+      <img src="images/chemise-homme.jpg" alt="Chemise Urbaine Ajustée">
+    </div>
+    <div class="carte-produit-info">
+      <h4>Chemise Urbaine Ajustée</h4>
+      <span class="etoiles"><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg> (64)</span>
+      <span class="prix">24 500 FCFA</span>
+    </div>
+  </a>
+
+  <a href="produit-3.html" class="carte-produit" data-cat="chaussures-sport nouveautes">
+    <div class="image-wrap">
+      <span class="badge-stock">Plus que 5 en stock</span>
+      <img src="images/sneakers.jpg" alt="Sneakers Running">
+    </div>
+    <div class="carte-produit-info">
+      <h4>Sneakers Running</h4>
+      <span class="etoiles"><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star icon-star-vide" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg> (203)</span>
+      <span class="prix">45 000 FCFA</span>
+    </div>
+  </a>
+
+  <a href="produit-4.html" class="carte-produit" data-cat="robes nouveautes">
+    <div class="image-wrap">
+      <img src="images/robe-femme.jpg" alt="Robe Chemise Bordeaux">
+    </div>
+    <div class="carte-produit-info">
+      <h4>Robe Chemise Bordeaux</h4>
+      <span class="etoiles"><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star icon-star-vide" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg> (97)</span>
+      <span class="prix">32 000 FCFA</span>
+    </div>
+  </a>
+
+  <a href="produit-5.html" class="carte-produit" data-cat="manteaux">
+    <div class="image-wrap">
+      <span class="badge-stock">Plus que 2 en stock</span>
+      <img src="images/manteau-femme.jpg" alt="Manteau Portefeuille Camel">
+    </div>
+    <div class="carte-produit-info">
+      <h4>Manteau Portefeuille Camel</h4>
+      <span class="etoiles"><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg> (41)</span>
+      <span class="prix">58 000 FCFA</span>
+    </div>
+  </a>
+
+</div>
+
+<footer class="site-footer" id="a-propos">
+  <div class="footer-haut">
+    <div class="footer-marque">
+      <span class="logo"><span class="logo-marque" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8l4 16 4-11 4 11 4-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-texte">Wooby<em>Store</em></span></span>
+      <p>Mode homme et femme pensée pour la ville. Des pièces choisies avec soin, livrées où que tu sois.</p>
+    </div>
+
+    <div class="footer-colonne">
+      <h4>Boutique</h4>
+      <ul>
+        <li><a href="liste-produits.html?cat=nouveautes">Nouveautés</a></li>
+        <li><a href="categorie-homme.html">Collection Homme</a></li>
+        <li><a href="categorie-femme.html">Collection Femme</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-colonne">
+      <h4>Aide</h4>
+      <ul>
+        <li><a href="#">Livraison et retours</a></li>
+        <li><a href="#">Guide des tailles</a></li>
+        <li><a href="#">Suivre ma commande</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-colonne footer-newsletter">
+      <h4>Restons en contact</h4>
+      <p style="margin:0 0 10px; color:#b9b2a6;">Les nouveautés et offres, une fois par mois.</p>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="Ton adresse email" aria-label="Adresse email">
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-paiements">
+    <span>Wave</span>
+    <span>Orange Money</span>
+    <span>Visa / Mastercard</span>
+    <span>Paiement à la livraison</span>
+  </div>
+
+  <div class="footer-bas">
+    <span>© 2026 Wooby Store. Tous droits réservés.</span>
+    <nav>
+      <a href="#">Mentions légales</a>
+      <a href="#">Conditions générales de vente</a>
+      <a href="#">Confidentialité</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+  // Filtre les produits affichés selon le paramètre ?cat= de l'URL
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get("cat") || "sweats";
+
+  const noms = {
+    "sweats": ["Sweats homme", "Homme"],
+    "chemises": ["Chemises homme", "Homme"],
+    "chaussures-sport": ["Chaussures de sport", "Homme"],
+    "robes": ["Robes femme", "Femme"],
+    "manteaux": ["Manteaux femme", "Femme"],
+    "accessoires": ["Accessoires femme", "Femme"],
+    "nouveautes": ["Nouveautés", "Accueil"]
+  };
+
+  const [nomCat, genre] = noms[cat] || noms["sweats"];
+  document.getElementById("titre-categorie").innerHTML = nomCat;
+  document.getElementById("nom-categorie").innerHTML = nomCat;
+  document.getElementById("lien-genre").textContent = genre;
+  document.getElementById("lien-genre").href =
+    genre === "Homme" ? "categorie-homme.html" : genre === "Femme" ? "categorie-femme.html" : "index.html";
+
+  document.querySelectorAll("#grille .carte-produit").forEach((carte) => {
+    const cats = carte.getAttribute("data-cat").split(" ");
+    carte.style.display = cats.includes(cat) ? "" : "none";
+  });
+</script>
+</body>
+</html>

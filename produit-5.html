@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manteau Portefeuille Camel — Wooby Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-bar">
+    <button class="menu-burger" onclick="toggleMenuMobile()" aria-label="Ouvrir le menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    <a href="index.html" class="logo"><span class="logo-marque" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8l4 16 4-11 4 11 4-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-texte">Wooby<em>Store</em></span></a>
+    <nav class="nav-principale">
+      <a href="categorie-homme.html">Homme</a>
+      <a href="categorie-femme.html">Femme</a>
+      <a href="liste-produits.html?cat=nouveautes">Nouveautés</a>
+      <a href="index.html#a-propos">Nos valeurs</a>
+    </nav>
+    <div class="header-icones">
+      <button class="icone-btn" aria-label="Rechercher"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <a href="panier.html" class="icone-btn" aria-label="Panier"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1.1 12.1a2 2 0 0 1-2 1.9H9.1a2 2 0 0 1-2-1.9L6 7z"/><path d="M9 7V5.5a3 3 0 0 1 6 0V7"/></svg><span class="badge-panier">0</span></a>
+    </div>
+  </div>
+  <div class="menu-mobile" id="menu-mobile">
+    <a href="categorie-homme.html">Homme</a>
+    <a href="categorie-femme.html">Femme</a>
+    <a href="liste-produits.html?cat=nouveautes">Nouveautés</a>
+    <a href="index.html#a-propos">Nos valeurs</a>
+  </div>
+</header>
+
+<nav class="fil-ariane">
+  <a href="index.html">Accueil</a> &rsaquo;
+  <a href="categorie-femme.html">Femme</a> &rsaquo;
+  <a href="liste-produits.html?cat=manteaux">Manteaux</a> &rsaquo;
+  <strong>Manteau Portefeuille Camel</strong>
+</nav>
+
+<div class="page-produit">
+  <div class="container">
+
+    <div class="galerie">
+      <div class="galerie-principale">
+        <img id="image-principale" src="images/manteau-femme.jpg" alt="Manteau Portefeuille Camel, vue de face">
+      </div>
+    </div>
+
+    <div class="zone-achat">
+      <h1>Manteau Portefeuille Camel</h1>
+      <div class="note-avis">
+        <span class="etoiles"><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg></span>
+        <span>4,9/5 — 41 avis vérifiés</span>
+      </div>
+
+      <div class="prix-produit">58 000 FCFA</div>
+
+      <p style="margin:-6px 0 16px; color:#333;">
+        Une coupe portefeuille ceinturée qui dessine la taille. Ta protection contre le froid, sans jamais sacrifier l'allure.
+      </p>
+
+      <div class="selecteur">
+        <label>Coloris : <span id="couleur-choisie">Camel</span></label>
+      </div>
+
+      <div class="selecteur">
+        <label>Taille : <span id="taille-choisie">M</span></label>
+        <div class="options-taille">
+          <button class="pastille-taille" onclick="choisirTaille('S', this)">S</button>
+          <button class="pastille-taille actif" onclick="choisirTaille('M', this)">M</button>
+          <button class="pastille-taille" onclick="choisirTaille('L', this)">L</button>
+        </div>
+      </div>
+
+      <p class="stock-info">Plus que 2 articles en stock</p>
+
+      <div class="cta-desktop">
+        <button class="btn btn-primaire btn-large"
+          onclick="ajouterAuPanier({id:'manteau', nom:'Manteau Portefeuille Camel', prix:58000, image:'images/manteau-femme.jpg', couleur: document.getElementById('couleur-choisie').textContent, taille: document.getElementById('taille-choisie').textContent, quantite:1}); window.location.href='panier.html';">
+          Ajouter au panier
+        </button>
+      </div>
+
+      <div class="reassurance">
+        <div class="item"><span class="picto"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>Paiement sécurisé</div>
+        <div class="item"><span class="picto"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="7" width="13" height="10" rx="1"/><path d="M14 10h4l3 3.2V17h-7v-7z"/><circle cx="6" cy="19" r="1.6" fill="currentColor" stroke="none"/><circle cx="17.5" cy="19" r="1.6" fill="currentColor" stroke="none"/></svg></span>Livraison 24-48h</div>
+        <div class="item"><span class="picto"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 11a8 8 0 1 1 2.4 6.2"/><polyline points="3.5 5.5 3.5 11 9 11"/></svg></span>Retour gratuit 14j</div>
+      </div>
+    </div>
+
+    <div class="onglets">
+      <div class="accordeon-item ouvert">
+        <button class="accordeon-titre" onclick="toggleAccordeon(this)">Description <span class="fleche"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="accordeon-contenu">
+          <ul>
+            <li><strong>Laine mélangée épaisse :</strong> te protège du froid sans t'alourdir, même par grand vent.</li>
+            <li><strong>Coupe oversize structurée :</strong> se superpose facilement à un pull épais sans jamais serrer.</li>
+            <li><strong>Doublure intérieure douce :</strong> confort immédiat dès l'enfilage.</li>
+          </ul>
+        </div>
+      </div>
+      <h3 style="margin-top:28px;">Avis clients</h3>
+    </div>
+    <div class="avis-liste">
+      <div class="avis-carte">
+        <span class="etoiles"><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg><svg class="icon-star" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12,3 14.6,9.1 21.3,9.7 16.2,14.1 17.7,20.6 12,17.1 6.3,20.6 7.8,14.1 2.7,9.7 9.4,9.1"/></svg></span>
+        <p>Qualité au-dessus de mes attentes pour ce prix, il tient vraiment chaud.</p>
+        <div class="auteur">Sokhna D. — Achat vérifié</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer" id="a-propos">
+  <div class="footer-haut">
+    <div class="footer-marque">
+      <span class="logo"><span class="logo-marque" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8l4 16 4-11 4 11 4-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-texte">Wooby<em>Store</em></span></span>
+      <p>Mode homme et femme pensée pour la ville. Des pièces choisies avec soin, livrées où que tu sois.</p>
+    </div>
+
+    <div class="footer-colonne">
+      <h4>Boutique</h4>
+      <ul>
+        <li><a href="liste-produits.html?cat=nouveautes">Nouveautés</a></li>
+        <li><a href="categorie-homme.html">Collection Homme</a></li>
+        <li><a href="categorie-femme.html">Collection Femme</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-colonne">
+      <h4>Aide</h4>
+      <ul>
+        <li><a href="#">Livraison et retours</a></li>
+        <li><a href="#">Guide des tailles</a></li>
+        <li><a href="#">Suivre ma commande</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-colonne footer-newsletter">
+      <h4>Restons en contact</h4>
+      <p style="margin:0 0 10px; color:#b9b2a6;">Les nouveautés et offres, une fois par mois.</p>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="Ton adresse email" aria-label="Adresse email">
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-paiements">
+    <span>Wave</span>
+    <span>Orange Money</span>
+    <span>Visa / Mastercard</span>
+    <span>Paiement à la livraison</span>
+  </div>
+
+  <div class="footer-bas">
+    <span>© 2026 Wooby Store. Tous droits réservés.</span>
+    <nav>
+      <a href="#">Mentions légales</a>
+      <a href="#">Conditions générales de vente</a>
+      <a href="#">Confidentialité</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="cta-flottant">
+  <span class="prix-mini">58 000 FCFA</span>
+  <button class="btn btn-primaire" style="flex:1;"
+    onclick="ajouterAuPanier({id:'manteau', nom:'Manteau Portefeuille Camel', prix:58000, image:'images/manteau-femme.jpg', couleur: document.getElementById('couleur-choisie').textContent, taille: document.getElementById('taille-choisie').textContent, quantite:1}); window.location.href='panier.html';">
+    Ajouter au panier
+  </button>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

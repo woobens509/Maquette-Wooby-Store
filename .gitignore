@@ -1,0 +1,6 @@
+# Captures d'ecran utilisees uniquement pour generer les livrables Word
+captures/
+
+# Fichiers systeme
+.DS_Store
+Thumbs.db

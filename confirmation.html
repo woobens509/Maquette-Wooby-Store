@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commande confirmée — Wooby Store</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-bar">
+    <a href="index.html" class="logo"><span class="logo-marque" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M4 8l4 16 4-11 4 11 4-16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="logo-texte">Wooby<em>Store</em></span></a>
+  </div>
+</header>
+
+<div class="page-tunnel" style="max-width:560px;">
+  <div class="etapes-tunnel">
+    <div class="etape fait"><div class="rond">1</div>Panier</div>
+    <div class="etape fait"><div class="rond">2</div>Livraison</div>
+    <div class="etape fait"><div class="rond">3</div>Paiement</div>
+    <div class="etape active"><div class="rond">4</div>Confirmation</div>
+  </div>
+</div>
+
+<div class="page-confirmation">
+  <div class="icone-succes"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6.5 9.5 17 4 12"/></svg></div>
+  <h1>Merci pour ta commande !</h1>
+  <p>Ton paiement a été confirmé. Tu recevras un email et un SMS dès que ton colis sera expédié, avec le numéro de suivi.</p>
+
+  <div class="numero-commande">Numéro de commande : #WB-20492</div>
+
+  <p style="font-size:0.9rem; color:#6b6b6b;">
+    Un compte a été pré-rempli avec ton adresse de livraison. Crée un mot de passe en un clic pour suivre toutes tes commandes futures.
+  </p>
+  <button class="btn btn-secondaire" style="margin:10px 0 24px;">Créer mon compte en un clic</button>
+
+  <a href="index.html" class="btn btn-primaire btn-large">Continuer mes achats</a>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+  // Fin du tunnel : on vide le panier simulé
+  ecrirePanier([]);
+  try { localStorage.removeItem("wooby_livraison"); } catch (err) {}
+</script>
+</body>
+</html>
